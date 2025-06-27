@@ -6,7 +6,7 @@ const About = () => {
     <section className="aboutdiv" id={"About"}>
       <div className="headingAboutDiv">
         <h2 className="headingAbout">About</h2>
-        <p>
+        <p className="dummyAbout">
           Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
           aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
           quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
@@ -33,7 +33,7 @@ const About = () => {
                   <div className="rowDetails">
                     <h3>Website: </h3>
                     <a href="https://github.com/RehanAhmed-dotcom/PortfolioWeb">
-                      https://github.com/RehanAhmed-dotcom/PortfolioWeb
+                     Rehan Portfolio
                     </a>
                   </div>
                 </div>
@@ -49,6 +49,38 @@ const About = () => {
                   <div className="rowDetails">
                     <h3>City: </h3>
                     <p>Rawalpindi Pakistan</p>
+                  </div>
+                </div>
+              </div>
+              <div className="rightdiv">
+                <div className="oneComp">
+                  <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
+                  <div className="rowDetails">
+                    <h3>Age: </h3>
+                    <p>28</p>
+                  </div>
+                </div>
+                <div className="oneComp">
+                  <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
+                  <div className="rowDetails">
+                    <h3>Degree: </h3>
+                    <p>Bachlors</p>
+                  </div>
+                </div>
+                <div className="oneComp">
+                  <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
+                  <div className="rowDetails">
+                    <h3>Email: </h3>
+                   <p>
+                    rehanahmed0406@gmail.com
+                    </p>
+                  </div>
+                </div>
+                <div className="oneComp">
+                  <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
+                  <div className="rowDetails">
+                    <h3>Freelance: </h3>
+                    <p>Available </p>
                   </div>
                 </div>
               </div>
