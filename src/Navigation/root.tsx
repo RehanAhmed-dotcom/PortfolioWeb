@@ -8,15 +8,6 @@ const Root = () => {
       <div className="DrawerContainer">
         <p>hello</p>
         <p>hello</p>
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>{" "}
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>{" "}
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>{" "}
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>{" "}
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>{" "}
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>{" "}
-        <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p> <p>hello</p>
       </div>
       <div className="mainbody">
         <Home />

@@ -124,6 +124,10 @@ button:focus-visible {
   height: 3px;
   margin: 10px 0;
 } */
+.headingAboutDiv h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
 .headingAbout {
   padding-bottom: 20px;
   /* margin-bottom: 20px; */
@@ -141,6 +145,58 @@ button:focus-visible {
 }
 
 .headingAboutDiv p {
+  /* background-color: red;  */
+  /* margin: 20px 0px; */
+}
+.aboutContent {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* background-color: blue; */
+}
+.imagediv {
+  height: 300px;
+  width: 33%;
   /* background-color: red; */
-  margin: 20px 0px;
+}
+.imagediv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.content {
+  margin-left: 10px;
+  width: 66%; /* 2/3 */
+  /* background-color: red; */
+}
+.DetailsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.oneComp {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  /* align-items: center;  */
+
+  /* background-color: red; */
+}
+.rowDetails {
+  display: flex;
+  flex-direction: row;
+  /* bottom: 20px; */
+}
+.rowDetails h3 {
+  margin: 0;
+  margin-left: 5px;
+}
+.rowDetails p,
+.rowDetails a {
+  margin-top: 2px;
+  margin-left: 10px;
+}
+p {
+  margin: 0;
 }
