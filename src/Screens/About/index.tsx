@@ -6,19 +6,14 @@ const About = () => {
     <section className="aboutdiv" id={"About"}>
       <div className="headingAboutDiv">
         <h2 className="headingAbout">About</h2>
-        <p className="dummyAbout">
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-          aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-          quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-          fugiat sit in iste officiis commodi quidem hic quas.
-        </p>
+        <p className="dummyAbout">Information about the reaching details.</p>
         <div className="aboutContent">
           <div className="imagediv">
             <img src={pic} alt="wrong path" />
           </div>
           <div className="content">
             <h2>React native & React developer</h2>
-            <p>Front end developer working on app (ios & android) and web.</p>
+            <p>Front end developer working on apps (ios & android) and web.</p>
             <div className="DetailsContainer">
               <div>
                 <div className="oneComp">
@@ -33,7 +28,7 @@ const About = () => {
                   <div className="rowDetails">
                     <h3>Website: </h3>
                     <a href="https://github.com/RehanAhmed-dotcom/PortfolioWeb">
-                     Rehan Portfolio
+                      Rehan Portfolio
                     </a>
                   </div>
                 </div>
@@ -41,7 +36,7 @@ const About = () => {
                   <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
                   <div className="rowDetails">
                     <h3>Phone no: </h3>
-                    <p>+923495010406</p>
+                    <p>+92 349 5010406</p>
                   </div>
                 </div>
                 <div className="oneComp">
@@ -71,9 +66,7 @@ const About = () => {
                   <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
                   <div className="rowDetails">
                     <h3>Email: </h3>
-                   <p>
-                    rehanahmed0406@gmail.com
-                    </p>
+                    <p>rehanahmed0406@gmail.com</p>
                   </div>
                 </div>
                 <div className="oneComp">
