@@ -340,3 +340,22 @@ p {
 .Experiencediv {
   margin-top: 30px;
 }
+.rowPortfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  width: 100%;
+}
+
+.oneProject {
+  width: 32%;
+  margin: 20px 0;
+  cursor: pointer;
+  height: 250px;
+  background-image: url("./assets/Pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
