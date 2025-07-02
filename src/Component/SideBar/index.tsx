@@ -86,7 +86,7 @@ const SideBar = () => {
       <div className="nav">
         <ul>
           <li>
-            <a href="#Home" className="navList">
+            <a href="/#Home" className="navList">
               <IoHomeOutline
                 className={active == "Home" ? "navActive" : "navIcon"}
                 size={20}
@@ -95,7 +95,7 @@ const SideBar = () => {
             </a>
           </li>
           <li>
-            <a href="#About" className="navList">
+            <a href="/#About" className="navList">
               <FaRegUser
                 className={active == "About" ? "navActive" : "navIcon"}
                 size={20}
@@ -104,7 +104,7 @@ const SideBar = () => {
             </a>
           </li>
           <li>
-            <a href="#Resume" className="navList">
+            <a href="/#Resume" className="navList">
               <FaRegFileAlt
                 className={active == "Resume" ? "navActive" : "navIcon"}
                 size={20}
@@ -113,7 +113,7 @@ const SideBar = () => {
             </a>
           </li>
           <li>
-            <a href="#Portfolio" className="navList">
+            <a href="/#Portfolio" className="navList">
               <IoHomeOutline
                 className={active == "Portfolio" ? "navActive" : "navIcon"}
                 size={20}
