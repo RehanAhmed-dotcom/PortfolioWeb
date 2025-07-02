@@ -1,10 +1,8 @@
-import React from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import SideBar from "../../Component/SideBar";
 
 const Detail = () => {
-  const { id } = useParams();
   const location = useLocation();
   const { item } = location.state;
   return (

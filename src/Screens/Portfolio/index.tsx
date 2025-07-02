@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import jm from "../../assets/jm.png";
 import work from "../../assets/workaman.png";

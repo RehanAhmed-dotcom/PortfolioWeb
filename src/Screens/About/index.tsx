@@ -1,4 +1,3 @@
-import React from "react";
 import pic from "../../assets/Pic.jpg";
 import { FaAngleRight } from "react-icons/fa6";
 const About = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "../Screens/Home";
 import About from "../Screens/About";
 import SideBar from "../Component/SideBar";
@@ -31,16 +30,6 @@ const Layout = () => {
 };
 const Root = () => {
   return (
-    // <div className="homeMain">
-    //   <SideBar />
-    //   <div className="mainbody">
-    //     <Home />
-    //     <About />
-    //     <Skills />
-    //     <Resume />
-    //     <Portfolio />
-    //   </div>
-    // </div>
     <Routes>
       <Route path="/detail/:id" element={<Layout />} />
       <Route path="/*" element={<Layout />} />

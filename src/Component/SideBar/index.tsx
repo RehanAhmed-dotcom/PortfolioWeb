@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import image from "../../assets/Pic.jpg";
 import {
   FaFacebook,
@@ -9,11 +9,10 @@ import {
   FaRegFileAlt,
 } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { IoHomeOutline, IoMailOutline } from "react-icons/io5";
+import { IoHomeOutline } from "react-icons/io5";
 
 // import { PiStackOverflowLogoFill } from "react-icons/pi";
 const SideBar = () => {
-  const [img, setImg] = useState("");
   const [active, setActive] = useState("Home");
   useEffect(() => {
     const handleScroll = () => {
@@ -33,10 +32,6 @@ const SideBar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <div className="DrawerContainer">
       <div className="ProfileImg">
