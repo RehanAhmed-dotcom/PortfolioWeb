@@ -5,7 +5,12 @@ const About = () => {
     <section className="aboutdiv" id={"About"}>
       <div className="headingAboutDiv">
         <h2 className="headingAbout">About</h2>
-        <p className="dummyAbout">Information about the reaching details.</p>
+        <p className="dummyAbout">
+          Experienced React Native developer with a passion for mobile app
+          development. Recognized for strong problem-solving skills and an
+          ability to quickly learn new technologies. Eager to join a team of
+          talented developers and help build world-class mobile apps.
+        </p>
         <div className="aboutContent">
           <div className="imagediv">
             <img src={pic} alt="wrong path" />
