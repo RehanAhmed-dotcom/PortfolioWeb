@@ -6,9 +6,14 @@ import Resume from "../Screens/Resume";
 import Portfolio from "../Screens/Portfolio";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Detail from "../Screens/Detail";
+import { useState } from "react";
+import { IoMenu } from "react-icons/io5";
 const Layout = () => {
   const location = useLocation();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  const closeSidebar = () => setSidebarOpen(false);
   const isDetailPage = location.pathname.startsWith("/detail");
 
   if (isDetailPage) {
@@ -17,7 +22,10 @@ const Layout = () => {
 
   return (
     <div className="homeMain">
-      <SideBar />
+      <button className="mobileMenuBtn" onClick={toggleSidebar}>
+        <IoMenu size={20} color="black" />
+      </button>
+      <SideBar isOpen={sidebarOpen} isClose={closeSidebar} />
       <div className="mainbody">
         <Home />
         <About />

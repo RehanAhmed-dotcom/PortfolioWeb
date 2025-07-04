@@ -41,8 +41,16 @@ const About = () => {
                 <div className="oneComp">
                   <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
                   <div className="rowDetails">
-                    <h3>City: </h3>
-                    <p>Rawalpindi Pakistan</p>
+                    <h3>Religon: </h3>
+                    <p>Muslim</p>
+                  </div>
+                </div>
+
+                <div className="oneComp">
+                  <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
+                  <div className="rowDetails">
+                    <h3>Email: </h3>
+                    <p>rehanahmed0406@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -64,8 +72,8 @@ const About = () => {
                 <div className="oneComp">
                   <FaAngleRight color="#149ddd" style={{ marginTop: 2 }} />
                   <div className="rowDetails">
-                    <h3>Email: </h3>
-                    <p>rehanahmed0406@gmail.com</p>
+                    <h3>City: </h3>
+                    <p>Rawalpindi Pakistan</p>
                   </div>
                 </div>
                 <div className="oneComp">
