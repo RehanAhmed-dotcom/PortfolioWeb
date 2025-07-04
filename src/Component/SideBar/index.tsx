@@ -89,7 +89,7 @@ const SideBar: React.FC<SideBarProps> = ({ isOpen, isClose }) => {
         <div className="nav">
           <ul>
             <li>
-              <a href="./#Home" className="navList">
+              <a href="./#Home" onClick={isClose} className="navList">
                 <IoHomeOutline
                   className={active == "Home" ? "navActive" : "navIcon"}
                   size={20}
@@ -98,7 +98,7 @@ const SideBar: React.FC<SideBarProps> = ({ isOpen, isClose }) => {
               </a>
             </li>
             <li>
-              <a href="./#About" className="navList">
+              <a href="./#About" onClick={isClose} className="navList">
                 <FaRegUser
                   className={active == "About" ? "navActive" : "navIcon"}
                   size={20}
@@ -107,7 +107,7 @@ const SideBar: React.FC<SideBarProps> = ({ isOpen, isClose }) => {
               </a>
             </li>
             <li>
-              <a href="./#Resume" className="navList">
+              <a href="./#Resume" onClick={isClose} className="navList">
                 <FaRegFileAlt
                   className={active == "Resume" ? "navActive" : "navIcon"}
                   size={20}
@@ -116,7 +116,7 @@ const SideBar: React.FC<SideBarProps> = ({ isOpen, isClose }) => {
               </a>
             </li>
             <li>
-              <a href="./#Portfolio" className="navList">
+              <a href="./#Portfolio" onClick={isClose} className="navList">
                 <IoHomeOutline
                   className={active == "Portfolio" ? "navActive" : "navIcon"}
                   size={20}
