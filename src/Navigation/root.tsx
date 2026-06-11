@@ -39,7 +39,7 @@ const Layout = () => {
 const Root = () => {
   return (
     <Routes>
-      <Route path="/detail/:id" element={<Layout />} />
+      <Route path="/detail/:name" element={<Layout />} />
       <Route path="/*" element={<Layout />} />
     </Routes>
   );

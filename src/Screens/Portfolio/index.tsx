@@ -215,8 +215,8 @@ const Portfolio = () => {
     (p) => active === "all" || p.category === active,
   );
 
-  const openDetail = (id: number, item: Project) => {
-    navigate(`/detail/${id}`, { state: { item } });
+  const openDetail = (name: string, item: Project) => {
+    navigate(`/detail/${name}`, { state: { item } });
   };
 
   return (
@@ -259,11 +259,13 @@ const Portfolio = () => {
             <div
               key={item.id}
               className="port-card"
-              onClick={() => openDetail(item.id, item)}
+              onClick={() => openDetail(item.name, item)}
               tabIndex={0}
               role="button"
               aria-label={`View ${item.name}`}
-              onKeyDown={(e) => e.key === "Enter" && openDetail(item.id, item)}
+              onKeyDown={(e) =>
+                e.key === "Enter" && openDetail(item.name, item)
+              }
             >
               {/* Project image */}
               <div className="port-card-img-wrap">
