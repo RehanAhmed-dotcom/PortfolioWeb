@@ -1,10 +1,9 @@
 /* ─── Page wrapper ────────────────────────────────────────── */
 .det-page {
   padding: 2rem 2.5rem 4rem;
-  max-width: 1100px;
-  margin: 0 auto;
   width: 100%;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 /* ─── Back button ─────────────────────────────────────────── */
@@ -33,16 +32,22 @@
 
 /* ─── Two-column layout ───────────────────────────────────── */
 .det-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: flex-start;
 }
 
 /* ─── Image column ────────────────────────────────────────── */
 .det-img-col {
   position: sticky;
   top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex: 0 0 260px;
+  width: 260px;
 }
 
 .det-img-frame {
@@ -50,9 +55,8 @@
   overflow: hidden;
   background: #f2f2f2;
   border: 1px solid #e8e8e8;
-  aspect-ratio: 9 / 16;
-  max-width: 320px;
-  margin: 0 auto;
+  width: 260px;
+  height: 460px;
 }
 
 .det-img {
@@ -62,8 +66,57 @@
   display: block;
 }
 
+/* ─── App Store button ────────────────────────────────────── */
+.det-appstore-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 11px 20px;
+  cursor: pointer;
+  width: 260px;
+  text-decoration: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+  box-sizing: border-box;
+}
+
+.det-appstore-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.det-appstore-btn:active {
+  transform: translateY(0);
+  opacity: 0.95;
+}
+
+.det-appstore-btn-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.det-appstore-btn-sub {
+  font-size: 10px;
+  opacity: 0.75;
+  letter-spacing: 0.03em;
+}
+
+.det-appstore-btn-main {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
 /* ─── Info column ─────────────────────────────────────────── */
 .det-info-col {
+  flex: 1;
+  min-width: 0;
   padding-top: 0.5rem;
 }
 
@@ -162,19 +215,25 @@
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */
-@media (max-width: 860px) {
+@media (max-width: 760px) {
   .det-layout {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    flex-direction: column;
   }
 
   .det-img-col {
     position: static;
+    flex: none;
+    width: 100%;
   }
 
   .det-img-frame {
+    width: 100%;
+    height: auto;
     aspect-ratio: 4 / 3;
-    max-width: 100%;
+  }
+
+  .det-appstore-btn {
+    width: 100%;
   }
 
   .det-name {
@@ -229,6 +288,11 @@
   .det-img-frame {
     background: #1a1a1a;
     border-color: #222;
+  }
+
+  .det-appstore-btn {
+    background: #f0f0f0;
+    color: #000;
   }
 
   .det-meta-grid {

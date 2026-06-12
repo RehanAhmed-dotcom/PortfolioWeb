@@ -107,6 +107,7 @@ interface Project {
   description: string;
   category: Category;
   accent: string;
+  appStoreUrl: string;
   iconBg: string;
   tagBg: string;
   tagColor: string;
@@ -119,6 +120,7 @@ const projects: Project[] = [
     name: "Job Mark",
     image: jm,
     projectType: "Job Finder App",
+    appStoreUrl: "https:jksldfjdkfsljsdf",
     description:
       "Job finding app where users browse reels, apply to jobs, contact clients, manage shifts and invoices.",
     category: "mobile",
@@ -132,6 +134,7 @@ const projects: Project[] = [
     id: 2,
     name: "Workaman",
     image: work,
+    appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "Product Delivery App",
     description:
       "Delivery app letting users track product origins, place orders, contact couriers and check delivery status.",
@@ -146,6 +149,7 @@ const projects: Project[] = [
     id: 3,
     name: "Mind Balance",
     image: mb,
+    appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "Meditation Music App",
     description:
       "Wellness app with curated meditation playlists, playback controls, and in-app purchases.",
@@ -160,6 +164,7 @@ const projects: Project[] = [
     id: 4,
     name: "Quickserv",
     image: qs,
+    appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "E-commerce App",
     description:
       "Multi-store marketplace with cart, checkout, and purchasing across multiple vendor storefronts.",
@@ -174,6 +179,7 @@ const projects: Project[] = [
     id: 5,
     name: "Aduane",
     image: aduane,
+    appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "Food Delivery App",
     description:
       "Food ordering app with restaurant discovery, recommendations, payments and order sharing.",
@@ -188,6 +194,7 @@ const projects: Project[] = [
     id: 6,
     name: "Kuwait",
     image: kuwait,
+    appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "Blood Donation App",
     description:
       "Donation platform for scheduling blood donations, connecting donors, and printing receipts.",
