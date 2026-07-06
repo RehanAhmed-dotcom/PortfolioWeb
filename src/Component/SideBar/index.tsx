@@ -46,7 +46,7 @@ const SideBar: React.FC<SideBarProps> = ({ isOpen, isClose }) => {
           <img src={image} alt="img not found" className="roundImg" />
         </div>
         <div className="ProfileData">
-          <h2>Syed Burhan Ahmed</h2>
+          <h2>Rehan Ahmed</h2>
         </div>
         <div className="ProfileSocialData">
           <a
