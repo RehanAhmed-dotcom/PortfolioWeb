@@ -150,9 +150,9 @@ button:focus-visible {
     margin-left: 0; /* Full width for main content */
   }
 }
-.homediv {
+/* .homediv {
   height: 100vh;
-  /* width: 100%; */
+  
   background-image: url("/src/assets/hero-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,7 +166,7 @@ button:focus-visible {
 .homediv h2 {
   font-size: 64px;
   font-weight: 700;
-  /* margin: 0; */
+  
 }
 @media (max-width: 768px) {
   .homediv h2 {
@@ -176,7 +176,120 @@ button:focus-visible {
 .homediv h3 {
   font-size: 26px;
   margin: 10px 0 0 3px;
-  /* margin: 0; */
+  
+} */
+.homediv {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-image: url("/src/assets/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* darken/tint the photo so white text is always legible */
+.homediv-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(10, 12, 20, 0.85) 0%,
+    rgba(10, 12, 20, 0.55) 55%,
+    rgba(10, 12, 20, 0.3) 100%
+  );
+}
+
+.homediv-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  padding: 0 6vw;
+}
+
+.homediv-eyebrow {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7dd3fc; /* accent — swap for your brand color */
+  margin-bottom: 12px;
+}
+
+.homediv-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0 0 8px;
+}
+
+.homediv-content h2 {
+  font-size: 26px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 20px;
+}
+
+.homediv-content p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 560px;
+  margin: 0 0 32px;
+}
+
+.homediv-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.btn-primary {
+  background: #7dd3fc;
+  color: #0a0c14;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #a5e2fd;
+}
+
+.btn-outline {
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: white;
+}
+.btn-outline:hover {
+  transform: translateY(-2px);
+  border-color: white;
+}
+
+@media (max-width: 768px) {
+  .homediv-content h1 {
+    font-size: 42px;
+  }
+  .homediv-content h2 {
+    font-size: 19px;
+  }
+  .homediv-actions {
+    flex-direction: column;
+  }
+  .btn {
+    text-align: center;
+  }
 }
 .aboutdiv {
   padding: 30px 10px;
@@ -229,6 +342,8 @@ button:focus-visible {
 .imagediv {
   height: 300px;
   width: 33%;
+  border-radius: 10px;
+  overflow: hidden;
   /* background-color: red; */
 }
 .content h2 {

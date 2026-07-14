@@ -1,4 +1,4 @@
-import pic from "../../assets/Pic.jpg";
+import pic from "../../assets/Picture.jpg";
 import { FaAngleRight } from "react-icons/fa6";
 const About = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import image from "../../assets/Pic.jpg";
+import image from "../../assets/Picture.jpg";
 import {
   FaFacebook,
   FaGithub,

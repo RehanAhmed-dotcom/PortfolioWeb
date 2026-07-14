@@ -89,12 +89,12 @@
 // export default Portfolio;
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import jm from "../../assets/jm.png";
-import work from "../../assets/workaman.png";
-import mb from "../../assets/mindBalance.png";
-import qs from "../../assets/quickserv.png";
-import aduane from "../../assets/aduane.png";
-import kuwait from "../../assets/Kuwait.png";
+import da from "../../assets/dayahead.png";
+import fb from "../../assets/fussball.png";
+import mb from "../../assets/Mobani.png";
+import Nt from "../../assets/Native.png";
+import rd from "../../assets/Rhodes.png";
+import spc from "../../assets/SPC.png";
 import "./Portfolio.css";
 
 type Category = "all" | "mobile" | "ecommerce" | "health";
@@ -117,12 +117,13 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    name: "Job Mark",
-    image: jm,
-    projectType: "Job Finder App",
-    appStoreUrl: "https:jksldfjdkfsljsdf",
+    name: "Day Ahead",
+    image: da,
+    projectType: "Day Ahead App",
+    appStoreUrl:
+      "https://apps.apple.com/pk/app/day-ahead-challenge/id6756488768",
     description:
-      "Job finding app where users browse reels, apply to jobs, contact clients, manage shifts and invoices.",
+      "Daily planning app that helps users organize and plan out their day with reminders. Stack: React Native, Push Notifications, Firebase.",
     category: "mobile",
     accent: "#185FA5",
     iconBg: "#E6F1FB",
@@ -133,7 +134,7 @@ const projects: Project[] = [
   {
     id: 2,
     name: "Workaman",
-    image: work,
+    image: fb,
     appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "Product Delivery App",
     description:
@@ -163,7 +164,7 @@ const projects: Project[] = [
   {
     id: 4,
     name: "Quickserv",
-    image: qs,
+    image: Nt,
     appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "E-commerce App",
     description:
@@ -178,7 +179,7 @@ const projects: Project[] = [
   {
     id: 5,
     name: "Aduane",
-    image: aduane,
+    image: rd,
     appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "Food Delivery App",
     description:
@@ -193,7 +194,7 @@ const projects: Project[] = [
   {
     id: 6,
     name: "Kuwait",
-    image: kuwait,
+    image: spc,
     appStoreUrl: "https:jksldfjdkfsljsdf",
     projectType: "Blood Donation App",
     description:
