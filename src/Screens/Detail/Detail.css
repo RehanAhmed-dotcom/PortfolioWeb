@@ -311,383 +311,390 @@
     color: #f0f0f0;
   }
 } */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* ─── Tokens ──────────────────────────────────────────────── */
 .det-page {
-  --det-bg: #faf9f6;
-  --det-ink: #16171a;
-  --det-soft: #78766e;
-  --det-faint: #a9a79e;
-  --det-hairline: #e5e2d9;
-  --det-stage: #f0eee6;
+    --det-bg: #faf9f6;
+    --det-ink: #16171a;
+    --det-soft: #78766e;
+    --det-faint: #a9a79e;
+    --det-hairline: #e5e2d9;
+    --det-stage: #f0eee6;
 
-  background: var(--det-bg);
-  color: var(--det-ink);
-  padding: 3rem 4rem 6rem;
-  width: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-  font-family:
-    "Inter",
-    -apple-system,
-    sans-serif;
+    background: var(--det-bg);
+    color: var(--det-ink);
+    padding: 3rem 4rem 6rem;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
 }
 
 /* Offset for the fixed 300px sidebar on desktop */
 @media (min-width: 781px) {
+    .det-page {
+        margin-left: 300px;
+        width: calc(100% - 300px);
+    }
+}
+
+/* @media (min-width: 781px) {
   .det-page {
     margin-left: 300px;
     width: calc(100% - 300px);
   }
-}
-
+} */
 /* ─── Back button ─────────────────────────────────────────── */
 .det-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--det-soft);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin-bottom: 3.5rem;
-  transition:
-    color 0.2s ease,
-    gap 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--det-soft);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 3.5rem;
+    transition: color 0.2s ease, gap 0.2s ease;
 }
 
 .det-back:hover {
-  color: var(--det-ink);
-  gap: 12px;
+    color: var(--det-ink);
+    gap: 12px;
 }
 
 .det-back .ti {
-  font-size: 13px;
+    font-size: 13px;
 }
 
 /* ─── Eyebrow ─────────────────────────────────────────────── */
 .det-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--det-soft);
-  margin-bottom: 2.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--det-soft);
+    margin-bottom: 2.25rem;
 }
 
 .det-eyebrow-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .det-eyebrow-rule {
-  flex: 1;
-  height: 1px;
-  background: var(--det-hairline);
-  max-width: 120px;
+    flex: 1;
+    height: 1px;
+    background: var(--det-hairline);
+    max-width: 120px;
 }
 
 /* ─── Two-column layout ───────────────────────────────────── */
 .det-layout {
-  display: flex;
-  flex-direction: row;
-  gap: 4.5rem;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
+    align-items: flex-start;
 }
 
 /* ─── Image / stage column ───────────────────────────────── */
 .det-img-col {
-  position: sticky;
-  top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  flex: 0 0 280px;
-  width: 280px;
+    position: sticky;
+    top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 0 0 280px;
+    width: 280px;
 }
 
 .det-stage {
-  position: relative;
-  width: 280px;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    width: 280px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .det-stage-glow {
-  position: absolute;
-  inset: -15%;
-  border-radius: 50%;
-  filter: blur(50px);
-  opacity: 0.35;
-  z-index: 0;
+    position: absolute;
+    inset: -15%;
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.35;
+    z-index: 0;
 }
 
 .det-img-frame {
-  position: relative;
-  z-index: 1;
-  border-radius: 28px;
-  overflow: hidden;
-  background: var(--det-stage);
-  border: 1px solid var(--det-hairline);
-  width: 260px;
-  height: 480px;
-  box-shadow: 0 30px 60px -20px rgba(22, 23, 26, 0.18);
+    position: relative;
+    z-index: 1;
+    border-radius: 28px;
+    overflow: hidden;
+    background: var(--det-stage);
+    border: 1px solid var(--det-hairline);
+    width: 260px;
+    height: 480px;
+    box-shadow: 0 30px 60px -20px rgba(22, 23, 26, 0.18);
 }
 
 .det-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* ─── App Store button ────────────────────────────────────── */
 .det-appstore-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--det-ink);
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 12px 20px;
-  cursor: pointer;
-  width: 260px;
-  text-decoration: none;
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
-  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--det-ink);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 260px;
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-sizing: border-box;
 }
 
 .det-appstore-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px -10px rgba(22, 23, 26, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -10px rgba(22, 23, 26, 0.4);
 }
 
 .det-appstore-btn:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 .det-appstore-btn-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
 }
 
 .det-appstore-btn-sub {
-  font-size: 10px;
-  opacity: 0.7;
-  letter-spacing: 0.03em;
+    font-size: 10px;
+    opacity: 0.7;
+    letter-spacing: 0.03em;
 }
 
 .det-appstore-btn-main {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 /* ─── Info column ─────────────────────────────────────────── */
 .det-info-col {
-  flex: 1;
-  min-width: 0;
-  padding-top: 0.25rem;
+    flex: 1;
+    min-width: 0;
+    padding-top: 0.25rem;
 }
 
 .det-top-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.75rem;
 }
 
 .det-icon-wrap {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .det-tag {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 5px 12px;
-  border-radius: 99px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 99px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .det-name {
-  font-family: "Fraunces", serif;
-  font-optical-sizing: auto;
-  font-size: 52px;
-  font-weight: 500;
-  color: var(--det-ink);
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  margin: 0 0 10px;
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-size: 52px;
+    font-weight: 500;
+    color: var(--det-ink);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0 0 10px;
 }
 
 .det-type {
-  font-size: 15px;
-  color: var(--det-soft);
-  margin: 0;
+    font-size: 15px;
+    color: var(--det-soft);
+    margin: 0;
 }
 
 .det-divider {
-  height: 1px;
-  background: var(--det-hairline);
-  margin: 2.5rem 0;
+    height: 1px;
+    background: var(--det-hairline);
+    margin: 2.5rem 0;
 }
 
 .det-section-label {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  color: var(--det-faint);
-  text-transform: uppercase;
-  margin: 0 0 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--det-faint);
+    text-transform: uppercase;
+    margin: 0 0 12px;
 }
 
 .det-desc {
-  font-size: 17px;
-  color: #3c3b37;
-  line-height: 1.8;
-  margin: 0 0 2.75rem;
-  max-width: 56ch;
+    font-size: 17px;
+    color: #3c3b37;
+    line-height: 1.8;
+    margin: 0 0 2.75rem;
+    max-width: 56ch;
 }
 
 /* ─── Spec sheet ──────────────────────────────────────────── */
 .det-spec-sheet {
-  border-top: 1px solid var(--det-hairline);
+    border-top: 1px solid var(--det-hairline);
 }
 
 .det-spec-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 2px;
-  border-bottom: 1px solid var(--det-hairline);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 2px;
+    border-bottom: 1px solid var(--det-hairline);
 }
 
 .det-spec-label {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--det-faint);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--det-faint);
 }
 
 .det-spec-value {
-  font-size: 14.5px;
-  font-weight: 500;
-  color: var(--det-ink);
-  text-align: right;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--det-ink);
+    text-align: right;
 }
-
+@media (min-width: 1080px) {
+    .det-info-col {
+        margin: 0 auto;
+    }
+}
 /* ─── Responsive ──────────────────────────────────────────── */
-@media (max-width: 780px) {
-  .det-page {
-    padding: 2rem 1.5rem 3rem;
-  }
+@media (max-width: 1080px) {
+    .det-page {
+        padding: 2rem 1.5rem 3rem;
+    }
 
-  .det-layout {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
+    .det-layout {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .det-layout a {
+        margin-top: 30px;
+    }
+    .det-img-col {
+        position: static;
+        flex: none;
+        width: 100%;
+        align-items: center;
+    }
 
-  .det-img-col {
-    position: static;
-    flex: none;
-    width: 100%;
-    align-items: center;
-  }
+    .det-stage,
+    .det-img-frame {
+        width: 100%;
+        max-width: 320px;
+    }
+    .det-info-col {
+        margin: 0 auto;
+    }
+    .det-img-frame {
+        height: auto;
+        aspect-ratio: 9 / 16;
+    }
 
-  .det-stage,
-  .det-img-frame {
-    width: 100%;
-    max-width: 320px;
-  }
+    .det-appstore-btn {
+        width: 100%;
+        max-width: 320px;
+    }
 
-  .det-img-frame {
-    height: auto;
-    aspect-ratio: 9 / 16;
-  }
+    .det-name {
+        font-size: 36px;
+    }
 
-  .det-appstore-btn {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .det-name {
-    font-size: 36px;
-  }
-
-  .det-desc {
-    max-width: none;
-  }
+    .det-desc {
+        max-width: none;
+    }
 }
 
 @media (max-width: 480px) {
-  .det-name {
-    font-size: 30px;
-  }
+    .det-name {
+        font-size: 30px;
+    }
 
-  .det-spec-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
+    .det-spec-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
 
-  .det-spec-value {
-    text-align: left;
-  }
+    .det-spec-value {
+        text-align: left;
+    }
 }
 
 /* ─── Reduced motion ──────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .det-back,
-  .det-appstore-btn {
-    transition: none;
-  }
+    .det-back,
+    .det-appstore-btn {
+        transition: none;
+    }
 }
 
 /* ─── Dark mode ───────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
-  .det-page {
-    --det-bg: #101113;
-    --det-ink: #f2f1ec;
-    --det-soft: #8b8a83;
-    --det-faint: #5f5e59;
-    --det-hairline: #2a2a28;
-    --det-stage: #1a1b1d;
-  }
+    .det-page {
+        --det-bg: #101113;
+        --det-ink: #f2f1ec;
+        --det-soft: #8b8a83;
+        --det-faint: #5f5e59;
+        --det-hairline: #2a2a28;
+        --det-stage: #1a1b1d;
+    }
 
-  .det-appstore-btn {
-    background: #f2f1ec;
-    color: #101113;
-  }
+    .det-appstore-btn {
+        background: #f2f1ec;
+        color: #101113;
+    }
 
-  .det-img-frame {
-    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
-  }
+    .det-img-frame {
+        box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+    }
 }
