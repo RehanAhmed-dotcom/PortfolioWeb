@@ -97,7 +97,13 @@ import rd from "../../assets/Rhodes.png";
 import spc from "../../assets/SPC.png";
 import "./Portfolio.css";
 
-type Category = "all" | "mobile" | "ecommerce" | "health";
+type Category =
+  | "all"
+  | "reminder"
+  | "real-state"
+  | "entertainment"
+  | "trading"
+  | "ride";
 
 interface Project {
   id: number;
@@ -108,6 +114,7 @@ interface Project {
   category: Category;
   accent: string;
   appStoreUrl: string;
+  Stack: string;
   iconBg: string;
   tagBg: string;
   tagColor: string;
@@ -119,13 +126,14 @@ const projects: Project[] = [
     id: 1,
     name: "Day Ahead",
     image: da,
-    projectType: "Day Ahead App",
+    projectType: "Reminder App",
     appStoreUrl:
       "https://apps.apple.com/pk/app/day-ahead-challenge/id6756488768",
     description:
-      "Daily planning app that helps users organize and plan out their day with reminders. Stack: React Native, Push Notifications, Firebase.",
-    category: "mobile",
+      "Daily planning app that helps users organize and plan out their day with reminders. ",
+    category: "reminder",
     accent: "#185FA5",
+    Stack: "React Native, Push Notifications, Firebase",
     iconBg: "#E6F1FB",
     tagBg: "#E6F1FB",
     tagColor: "#0C447C",
@@ -133,13 +141,14 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    name: "Workaman",
+    name: "Fussball",
     image: fb,
-    appStoreUrl: "https:jksldfjdkfsljsdf",
-    projectType: "Product Delivery App",
+    appStoreUrl: "https://apps.apple.com/de/app/fussball-europa/id442924872",
+    projectType: "Football App",
     description:
-      "Delivery app letting users track product origins, place orders, contact couriers and check delivery status.",
-    category: "mobile",
+      "Football news and entertainment app delivering real-time updates on teams and players across European leagues.",
+    category: "entertainment",
+    Stack: "React Native, REST APIs",
     accent: "#0F6E56",
     iconBg: "#E1F5EE",
     tagBg: "#E1F5EE",
@@ -148,13 +157,14 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    name: "Mind Balance",
+    name: "Mobani",
     image: mb,
-    appStoreUrl: "https:jksldfjdkfsljsdf",
-    projectType: "Meditation Music App",
+    appStoreUrl: "https://apps.apple.com/us/app/mobany/id6762458576",
+    projectType: "Banking App",
     description:
-      "Wellness app with curated meditation playlists, playback controls, and in-app purchases.",
-    category: "health",
+      "Mobile banking / fintech app delivering a streamlined account and transaction experience.",
+    category: "trading",
+    Stack: " React Native, REST APIs, Firebase.",
     accent: "#534AB7",
     iconBg: "#EEEDFE",
     tagBg: "#EEEDFE",
@@ -163,13 +173,14 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    name: "Quickserv",
+    name: "Native Rider",
     image: Nt,
-    appStoreUrl: "https:jksldfjdkfsljsdf",
-    projectType: "E-commerce App",
+    appStoreUrl: "https://apps.apple.com/pk/app/native-rider/id6752636332",
+    projectType: "Ride App",
     description:
-      "Multi-store marketplace with cart, checkout, and purchasing across multiple vendor storefronts.",
-    category: "ecommerce",
+      "Community-driven ride-sharing marketplace where drivers set their own prices and retain 100% of earnings. Built with real-time location tracking and a dynamic pricing engine.",
+    category: "ride",
+    Stack: "React Native, Firebase, Google Maps, Push Notifications",
     accent: "#854F0B",
     iconBg: "#FAEEDA",
     tagBg: "#FAEEDA",
@@ -178,14 +189,16 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    name: "Aduane",
+    name: "Rhodes",
     image: rd,
-    appStoreUrl: "https:jksldfjdkfsljsdf",
-    projectType: "Food Delivery App",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/rhodes-investment-group/id6768275536",
+    projectType: "Investment App",
     description:
-      "Food ordering app with restaurant discovery, recommendations, payments and order sharing.",
-    category: "mobile",
+      "Investment app for tracking portfolios and managing investment activity on the go.",
+    category: "trading",
     accent: "#993C1D",
+    Stack: " React Native, REST APIs, Firebase",
     iconBg: "#FAECE7",
     tagBg: "#FAECE7",
     tagColor: "#712B13",
@@ -193,13 +206,14 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    name: "Kuwait",
+    name: "Commercial SPC",
     image: spc,
-    appStoreUrl: "https:jksldfjdkfsljsdf",
-    projectType: "Blood Donation App",
+    appStoreUrl: "https://apps.apple.com/pl/app/commercial-spc/id1618722248",
+    projectType: "Real estate App",
     description:
-      "Donation platform for scheduling blood donations, connecting donors, and printing receipts.",
-    category: "health",
+      "Real estate marketplace with secure authentication and Stripe-powered transactions for property listings, sales, and purchases.",
+    category: "real-state",
+    Stack: " React Native, Stripe, REST APIs",
     accent: "#A32D2D",
     iconBg: "#FCEBEB",
     tagBg: "#FCEBEB",
@@ -210,9 +224,11 @@ const projects: Project[] = [
 
 const filters: { label: string; value: Category }[] = [
   { label: "All", value: "all" },
-  { label: "Mobile apps", value: "mobile" },
-  { label: "E-commerce", value: "ecommerce" },
-  { label: "Health", value: "health" },
+  { label: "Reminder", value: "reminder" },
+  { label: "Real Estate", value: "real-state" },
+  { label: "Entertainment", value: "entertainment" },
+  { label: "Trading", value: "trading" },
+  { label: "Ride", value: "ride" },
 ];
 
 const Portfolio = () => {
@@ -310,16 +326,23 @@ const Portfolio = () => {
                 <p className="port-card-name">{item.name}</p>
                 <p className="port-card-type">{item.projectType}</p>
                 <p className="port-card-desc">{item.description}</p>
+                <p className="port-card-stack">{item.Stack}</p>
 
                 <span
                   className="port-card-tag"
                   style={{ background: item.tagBg, color: item.tagColor }}
                 >
-                  {item.category === "mobile"
-                    ? "Mobile"
-                    : item.category === "ecommerce"
-                      ? "E-commerce"
-                      : "Health"}
+                  {item.category === "entertainment"
+                    ? "Entertainment"
+                    : item.category === "real-state"
+                      ? "Real Estate"
+                      : item.category === "reminder"
+                        ? "Reminder"
+                        : item.category === "ride"
+                          ? "Ride"
+                          : item.category === "trading"
+                            ? "Trading"
+                            : null}
                 </span>
               </div>
 

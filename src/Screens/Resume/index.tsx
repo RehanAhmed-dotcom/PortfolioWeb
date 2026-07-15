@@ -1,7 +1,8 @@
+import "./Resume.css";
 const Resume = () => {
   return (
-    <section className="skilldiv" id={"Resume"}>
-      <div className="ResumelDiv">
+    <section className="resumediv" id={"Resume"}>
+      <div className="ResumeDiv">
         <h2 className="headingAbout">Resume</h2>
         <p className="dummyAbout">
           Information about education and work experience.

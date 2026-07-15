@@ -1,12 +1,17 @@
 /* ─── Section wrapper ─────────────────────────────────────── */
 .port-section {
   padding: 5rem 0;
-  width: 100%;
+  /* background-color: red; */
+  padding: 20px 10px;
+  /* width: 100%; */
+  /* margin: 0; */
 }
 
 .port-container {
-  max-width: 1100px;
-  margin: 0 auto;
+  /* max-width: 1100px; */
+  width: 100%;
+
+  /* margin: 0 auto; */
   /* padding: 0 2rem; */
 }
 
@@ -169,6 +174,7 @@
 /* Card body */
 .port-card-body {
   padding: 1.25rem 1.25rem 1.5rem;
+  background-color: white;
 }
 
 .port-card-num {
@@ -262,13 +268,13 @@
 
 /* ─── Dark mode ───────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
-  .port-card {
+  /* .port-card {
     background: #111;
-  }
+  } */
 
-  .port-card:hover {
+  /* .port-card:hover {
     background: #161616;
-  }
+  } */
 
   .port-title {
     color: #000000;
@@ -302,7 +308,7 @@
   }
 
   .port-grid {
-    background: #222;
+    background: white;
     border-color: #222;
   }
 
@@ -310,9 +316,9 @@
     background: #1a1a1a;
   }
 
-  .port-card-name {
+  /* .port-card-name {
     color: #f0f0f0;
-  }
+  } */
 
   .port-card-type {
     color: #555;
