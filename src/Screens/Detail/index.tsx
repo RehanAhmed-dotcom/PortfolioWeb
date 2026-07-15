@@ -235,7 +235,7 @@
 // };
 
 // export default Detail;
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import SideBar from '../../Component/SideBar';
 import { useState } from 'react';
 import { IoMenu } from 'react-icons/io5';
@@ -326,7 +326,6 @@ const AppleIcon = () => (
 
 const Detail = () => {
     const location = useLocation();
-    const navigate = useNavigate();
     const { item } = location.state;
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
